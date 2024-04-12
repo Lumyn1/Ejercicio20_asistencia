@@ -1,4 +1,4 @@
-PVector coordenadas;
+PVector coordenadasRect;
 int altoRect, anchoRect, distRect;
 
 void setup() {
@@ -6,7 +6,7 @@ void setup() {
   distRect = 20;
   anchoRect = 40;
   altoRect = 20;
-  coordenadas = new PVector(distRect, distRect);
+  coordenadasRect = new PVector(distRect, distRect);
 }
 
 void draw() {
@@ -17,8 +17,8 @@ void draw() {
 }
 
 void dibujarRec() {
-  for (float x = coordenadas.x; x < width; x += (anchoRect + distRect)) {
-    for (float y = coordenadas.y; y < height; y += (altoRect + distRect)) {
+  for (float x = coordenadasRect.x; x < width; x += (anchoRect + distRect)) {
+    for (float y = coordenadasRect.y; y < height; y += (altoRect + distRect)) {
       rect(x, y, anchoRect, altoRect);
     }
   }
